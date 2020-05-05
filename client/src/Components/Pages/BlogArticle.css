@@ -1,0 +1,15 @@
+#Article-Body {
+  display: grid;
+  grid-template-columns: minmax(200px, auto) 1fr;
+  grid-template-areas: "navbar mainContent";
+  grid-gap: 20px;
+}
+
+.siderbar {
+  grid-area: navbar;
+  position: fixed;
+}
+
+#Article-Content {
+  grid-area: mainContent;
+}

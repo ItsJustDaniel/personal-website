@@ -1,0 +1,13 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: space mono;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  #project-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,18 @@
+#welcome-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#name {
+  font-size: 40px;
+}
+#name-desc {
+  font-size: 25px;
+}
+#content-container {
+  margin: 0 auto;
+  width: 85vw;
+}

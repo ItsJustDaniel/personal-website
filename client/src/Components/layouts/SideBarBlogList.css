@@ -1,0 +1,9 @@
+nav.sidebar {
+  list-style: none;
+  padding: 0;
+  width: 17vw;
+}
+
+a.blog-link.sidebar {
+  border-bottom: solid;
+}

@@ -1,0 +1,34 @@
+.Contact-Icons {
+  font-size: 30px;
+}
+
+.github {
+  color: white;
+}
+
+.github:hover {
+  color: gray;
+}
+
+.twitter {
+  color: white;
+}
+
+.twitter:hover {
+  color: rgb(65, 161, 242);
+}
+
+.email {
+  color: white;
+}
+.email:hover {
+  color: gray;
+}
+
+.Contact-Icons {
+  display: flex;
+  width: 12vw;
+  justify-content: space-between;
+  padding-bottom: 0px;
+  margin: auto;
+}

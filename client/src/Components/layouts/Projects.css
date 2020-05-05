@@ -1,0 +1,40 @@
+#project-containter {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 22px;
+}
+
+div.project {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Image-Container {
+  position: relative;
+  overflow: hidden;
+}
+
+.Image-Container .content {
+  position: Absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+}
+
+.Image {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.Image-Container:hover .Image {
+  transform: scale(1.1);
+  transition: 0.5s;
+  overflow: hidden;
+  opacity: 0.7;
+}

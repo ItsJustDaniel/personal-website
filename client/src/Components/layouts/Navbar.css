@@ -1,0 +1,21 @@
+#navbar {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.nav-links {
+  text-decoration: none;
+  color: white;
+}
+
+#navContainer {
+  width: 50vh;
+  display: flex;
+  justify-content: space-around;
+  font-size: 17px;
+}
+
+a:hover {
+  color: grey;
+}
