@@ -1,9 +1,9 @@
 import React from "react"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import SideBlog from "../components/SideBlogList.js"
 import BlogPostStyles from "./blog-post.module.scss"
-import Head from "../components/head"
+import Head from "../components/Head"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 export const query = graphql`

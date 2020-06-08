@@ -6,7 +6,7 @@ import Projects from "../components/Projects"
 import Contacts from "../components/Contact"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import Head from "../components/head"
+import Head from "../components/Head"
 
 const IndexPage = () => (
   <Layout>
