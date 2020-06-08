@@ -1,0 +1,32 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Space Mono;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  #project-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+#welcome-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#name {
+  font-size: 40px;
+}
+#name-desc {
+  font-size: 25px;
+}
+#content-container {
+  margin: 0 auto;
+  width: 85vw;
+}

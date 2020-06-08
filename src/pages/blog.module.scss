@@ -1,0 +1,22 @@
+.posts {
+  list-style-type: none;
+  margin: 0;
+}
+
+.post {
+  margin: 1rem 0;
+  text-decoration: none;
+  color: white;
+  border-bottom: 2px white solid;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+  }
+  p {
+    font-family: italic;
+  }
+}
