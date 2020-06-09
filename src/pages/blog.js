@@ -27,7 +27,7 @@ const Blog = props => {
           return (
             <Link className={blogStyles.post} to={`blog/${blog.node.slug}`}>
               <li key={i}>
-                <h2>{blog.node.title}</h2>
+                <h3>{blog.node.title}</h3>
                 <p className={blogStyles.date}>{blog.node.publishedDate}</p>
               </li>
             </Link>

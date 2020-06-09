@@ -8,8 +8,23 @@
   text-decoration: none;
   color: white;
   width: 100%;
+  border-bottom: solid;
+  li {
+    border-bottom: solid;
+    margin: 0;
+    text-align: left;
+  }
 }
 
 .blogTitle {
-  border-bottom: white solid;
+  margin: 8px;
+}
+
+.date {
+  margin: 8px;
+  font-weight: normal;
+}
+
+.date {
+  font-family: italic;
 }

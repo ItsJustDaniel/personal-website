@@ -26,7 +26,10 @@ const SideBlog = () => {
               to={`blog/${blog.node.slug}`}
             >
               <li key={i}>
-                <h2 className={SideBlogStyles.blogTitle}>{blog.node.title}</h2>
+                <h3 className={SideBlogStyles.blogTitle}>{blog.node.title}</h3>
+                <h5 className={SideBlogStyles.date}>
+                  {blog.node.publishedDate}
+                </h5>
               </li>
             </Link>
           )
