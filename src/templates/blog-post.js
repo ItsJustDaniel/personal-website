@@ -8,12 +8,12 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 export const query = graphql`
   query($slug: String!) {
-    contentfulBlogPost(slug: { eq: $slug }) {
-      title
-      publishedDate(formatString: "MMMM Do, YYYY")
-      body {
-        json
+    markdownRemark(frontmatter: { title: { eq: $slug } }) {
+      frontmatter {
+        title
+        date
       }
+      html
     }
   }
 `
@@ -31,16 +31,16 @@ export default function BlogPost(props) {
   }
   return (
     <Layout>
-      <Head title={props.data.contentfulBlogPost.title} />
+      <Head title={props.data.markdownRemark.frontmatter.title} />
       <div className={BlogPostStyles.PostBody}>
         <SideBlog />
+
         <div className={BlogPostStyles.post}>
-          <h1>{props.data.contentfulBlogPost.title}</h1>
-          <p>{props.data.contentfulBlogPost.date}</p>
-          {documentToReactComponents(
-            props.data.contentfulBlogPost.body.json,
-            options
-          )}
+          <h1>{props.data.markdownRemark.frontmatter.title}</h1>
+          <p>{props.data.markdownRemark.frontmatter.date}</p>
+          <div
+            dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
+          ></div>
         </div>
       </div>
     </Layout>

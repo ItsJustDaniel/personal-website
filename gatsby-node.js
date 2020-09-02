@@ -6,29 +6,44 @@
 
 // You can delete this file if you're not using i
 const path = require(`path`)
-// const { createFilePath } = require(`gatsby-source-filesystem`)
+const { createFilePath } = require(`gatsby-source-filesystem`)
+
+module.exports.onCreateNode = ({ node, actions }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === "MarkdownRemark") {
+    const slug = path.basename(node.fileAbsolutePath, ".md")
+
+    createNodeField({
+      node,
+      name: "slug",
+      file: slug,
+    })
+  }
+}
 
 module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const blogTemplate = path.resolve("./src/templates/blog-post.js")
   const res = await graphql(`
     query {
-      allContentfulBlogPost {
+      allMarkdownRemark {
         edges {
           node {
-            slug
+            frontmatter {
+              title
+            }
           }
         }
       }
     }
   `)
 
-  res.data.allContentfulBlogPost.edges.forEach(edge => {
+  res.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
-      component: blogTemplate,
-      path: `/blog/${edge.node.slug}`,
+      component: path.resolve(`./src/templates/blog-post.js`),
+      path: `/blog/${node.frontmatter.title}`,
       context: {
-        slug: edge.node.slug,
+        slug: node.frontmatter.title,
       },
     })
   })

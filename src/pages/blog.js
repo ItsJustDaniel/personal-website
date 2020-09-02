@@ -7,12 +7,13 @@ import Head from "../components/Head"
 const Blog = props => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
+      allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
         edges {
           node {
-            title
-            slug
-            publishedDate(formatString: "MMMM Do, YYYY")
+            frontmatter {
+              title
+              date
+            }
           }
         }
       }
@@ -23,12 +24,15 @@ const Blog = props => {
       <Head title="Blog" />
       <h1>Blog</h1>
       <ol className={blogStyles.posts}>
-        {data.allContentfulBlogPost.edges.map((blog, i) => {
+        {data.allMarkdownRemark.edges.map((blog, i) => {
           return (
-            <Link className={blogStyles.post} to={`blog/${blog.node.slug}`}>
+            <Link
+              className={blogStyles.post}
+              to={`blog/${blog.node.frontmatter.title}`}
+            >
               <li key={i}>
-                <h3>{blog.node.title}</h3>
-                <p className={blogStyles.date}>{blog.node.publishedDate}</p>
+                <h3>{blog.node.frontmatter.title}</h3>
+                <p className={blogStyles.date}>{blog.node.frontmatter.date}</p>
               </li>
             </Link>
           )

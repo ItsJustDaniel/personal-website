@@ -5,12 +5,13 @@ import SideBlogStyles from "./SideBlogList.module.scss"
 const SideBlog = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
+      allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
         edges {
           node {
-            title
-            slug
-            publishedDate(formatString: "MMMM Do, YYYY")
+            frontmatter {
+              title
+              date
+            }
           }
         }
       }
@@ -19,16 +20,18 @@ const SideBlog = () => {
   return (
     <div>
       <ol className={SideBlogStyles.sidebar}>
-        {data.allContentfulBlogPost.edges.map((blog, i) => {
+        {data.allMarkdownRemark.edges.map((blog, i) => {
           return (
             <Link
               className={SideBlogStyles.sidebarPosts}
-              to={`blog/${blog.node.slug}`}
+              to={`blog/${blog.node.frontmatter.title}`}
             >
               <li key={i}>
-                <h3 className={SideBlogStyles.blogTitle}>{blog.node.title}</h3>
+                <h3 className={SideBlogStyles.blogTitle}>
+                  {blog.node.frontmatter.title}
+                </h3>
                 <h5 className={SideBlogStyles.date}>
-                  {blog.node.publishedDate}
+                  {blog.node.frontmatter.date}
                 </h5>
               </li>
             </Link>
