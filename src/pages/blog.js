@@ -13,6 +13,7 @@ const Blog = props => {
             frontmatter {
               title
               date
+              slug
             }
           }
         }
@@ -25,10 +26,11 @@ const Blog = props => {
       <h1>Blog</h1>
       <ol className={blogStyles.posts}>
         {data.allMarkdownRemark.edges.map((blog, i) => {
+          console.log(blog.node.frontmatter.slug)
           return (
             <Link
               className={blogStyles.post}
-              to={`blog/${blog.node.frontmatter.title}`}
+              to={`blog/${blog.node.frontmatter.slug}`}
             >
               <li key={i}>
                 <h3>{blog.node.frontmatter.title}</h3>

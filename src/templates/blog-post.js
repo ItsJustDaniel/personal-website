@@ -8,10 +8,11 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark(frontmatter: { title: { eq: $slug } }) {
+    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
         title
         date
+        slug
       }
       html
     }
@@ -21,7 +22,7 @@ export default function BlogPost(props) {
   const options = {
     renderNode: {
       "embedded-asset-block": node => {
-        const alt = node.data.target.fields.title["en-US"]
+        const alt = node.data.target.fields.slug["en-US"]
         const url = node.data.target.fields.file["en-US"].url
         return <img className={BlogPostStyles.image} alt={alt} src={url} />
         console.log(alt)
@@ -31,7 +32,7 @@ export default function BlogPost(props) {
   }
   return (
     <Layout>
-      <Head title={props.data.markdownRemark.frontmatter.title} />
+      <Head title={props.data.markdownRemark.frontmatter.slug} />
       <div className={BlogPostStyles.PostBody}>
         <SideBlog />
 

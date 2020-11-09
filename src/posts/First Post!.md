@@ -1,6 +1,7 @@
 ---
 title: "Hello World"
-date: "2020-07-06"
+date: "2020-06-07"
+slug: "Hello World"
 ---
 
 This is my first blog post. To be honest im kind of nervous about this, i've never been much of a writer in fact i've never been good at articulating my thoughts, i've never shared my thoughts on certain events, politics and religion and really haven't had much of a presence on social media. This has its drawbacks of course, i'm shy and can never speak my mind and even when i do i can never am able to articulate it well, i'm self-conscious and have low self-esteem. I hope that with this blog, i will able improve with some of these things.

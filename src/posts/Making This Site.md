@@ -1,7 +1,7 @@
 ---
 title: "Making this site"
 date: "2020-07-10"
-slug: "making this site"
+slug: "Making this site"
 ---
 
 When i first went on to make this site, i hadn't originally heard of Gatsby and had planned to make this with just react/express.

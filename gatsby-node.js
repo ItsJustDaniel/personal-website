@@ -30,7 +30,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
         edges {
           node {
             frontmatter {
-              title
+              slug
             }
           }
         }
@@ -41,9 +41,9 @@ module.exports.createPages = async ({ graphql, actions }) => {
   res.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       component: path.resolve(`./src/templates/blog-post.js`),
-      path: `/blog/${node.frontmatter.title}`,
+      path: `/blog/${node.frontmatter.slug}`,
       context: {
-        slug: node.frontmatter.title,
+        slug: node.frontmatter.slug,
       },
     })
   })

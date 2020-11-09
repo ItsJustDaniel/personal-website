@@ -5,12 +5,13 @@ import SideBlogStyles from "./SideBlogList.module.scss"
 const SideBlog = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___date] }) {
         edges {
           node {
             frontmatter {
               title
               date
+              slug
             }
           }
         }
@@ -24,7 +25,7 @@ const SideBlog = () => {
           return (
             <Link
               className={SideBlogStyles.sidebarPosts}
-              to={`blog/${blog.node.frontmatter.title}`}
+              to={`blog/${blog.node.frontmatter.slug}`}
             >
               <li key={i}>
                 <h3 className={SideBlogStyles.blogTitle}>

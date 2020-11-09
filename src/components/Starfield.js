@@ -9,7 +9,7 @@ class StarField extends React.Component {
 
     const COLOR_SPACE = "black"
     const COLOR_STARS = "white"
-    const STAR_NUM = 50
+    const STAR_NUM = 18
     const STAR_SIZE = 0.005
     const STAR_SPEED = 0.05
 

@@ -107,22 +107,22 @@ export default function Projects(props) {
             </a>
           </div>
         </div>
-        {/* js documentation */}
+        {/*  */}
         <div className="project">
           <div className="Image-Container">
             <a
               className="project-tile"
-              href="https://codepen.io/Derpniel/pen/vqvXVo"
+              href="https://itsjustdaniel.github.io/recursive-art/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
-                src="https://screenshot.codepen.io/3353909.vqvXVo.small.8b3403ee-2210-4a6a-9202-50073612445f.png"
+                src="https://raw.githubusercontent.com/ItsJustDaniel/recursive-art/master/image/Fractal%20Tree.png"
                 className="Image"
                 alt="calculator"
               />
               <div className="content">
-                <h2>Js Documentation</h2>
+                <h2>Recursive Art</h2>
               </div>
             </a>
           </div>
