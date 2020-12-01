@@ -7,26 +7,6 @@ export default function Projects(props) {
       {/* Projects */}
       <h2 id="project-title">Projects</h2>
       <div id="project-containter">
-        {/*Quote Machine */}
-        <div className="project">
-          <div className="Image-Container">
-            <a
-              className="project-tile"
-              href="https://itsjustdaniel.github.io/quote-machine/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://raw.githubusercontent.com/ItsJustDaniel/Project-Images/master/Screenshots/Quote%20Machine.png"
-                className="Image"
-                alt=""
-              />
-              <div className="content">
-                <h2>Quote Machine</h2>
-              </div>
-            </a>
-          </div>
-        </div>
         {/*mardown previewer */}
         <div className="project">
           <div className="Image-Container">
@@ -107,7 +87,7 @@ export default function Projects(props) {
             </a>
           </div>
         </div>
-        {/*  */}
+        {/*recursive art */}
         <div className="project">
           <div className="Image-Container">
             <a
@@ -123,6 +103,26 @@ export default function Projects(props) {
               />
               <div className="content">
                 <h2>Recursive Art</h2>
+              </div>
+            </a>
+          </div>
+        </div>
+        {/* Marvel Character Search */}
+        <div className="project">
+          <div className="Image-Container">
+            <a
+              className="project-tile"
+              href="https://itsjustdaniel.github.io/Marvel-Search/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://raw.githubusercontent.com/ItsJustDaniel/Project-Images/master/Screenshots/Marvel-Search.png"
+                className="Image"
+                alt=""
+              />
+              <div className="content">
+                <h2>Quote Machine</h2>
               </div>
             </a>
           </div>
