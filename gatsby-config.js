@@ -8,14 +8,9 @@ module.exports = {
     "gatsby-plugin-react-helmet",
 
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          {
-            family: `Space Mono`,
-            variants: [`400`],
-          },
-        ],
+        fonts: ["Space Mono:400"],
       },
     },
     "gatsby-plugin-sass",
