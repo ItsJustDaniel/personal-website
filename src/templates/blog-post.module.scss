@@ -1,6 +1,7 @@
 .PostBody {
   display: flex;
   flex-direction: row;
+  text-align: center;
 }
 
 .post {
@@ -9,4 +10,12 @@
 
 .image {
   max-width: 750px;
+  margin: auto;
+  width: 20em;
+}
+
+img[src$="fractalTree"] {
+  display: block;
+  margin: 0 auto;
+  width: 467px;
 }

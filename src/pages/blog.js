@@ -30,7 +30,7 @@ const Blog = props => {
           return (
             <Link
               className={blogStyles.post}
-              to={`blog/${blog.node.frontmatter.slug}`}
+              to={`${blog.node.frontmatter.slug}`}
             >
               <li key={i}>
                 <h3>{blog.node.frontmatter.title}</h3>

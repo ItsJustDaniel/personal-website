@@ -122,7 +122,7 @@ export default function Projects(props) {
                 alt=""
               />
               <div className="content">
-                <h2>Quote Machine</h2>
+                <h2>Marvel Search</h2>
               </div>
             </a>
           </div>

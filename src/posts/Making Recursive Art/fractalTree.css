@@ -1,0 +1,5 @@
+img[src$="fractalTree"] {
+  display: block;
+  margin: 0 auto;
+  width: 467px;
+}

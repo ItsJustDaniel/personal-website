@@ -6,8 +6,12 @@ slug: "Making Fractals"
 
 Recently, i started getting interested in fractals. fractals are seeingly never-ending patterns that created by repeating patterns across different scales. in programming, fractals are popular becaause you can create very complex art using only a few lines of code. Some popular examples include the sierinski carpet and the koch snowflake.
 
-![Koch Snowflake](./Images/Koch-snowflake.jpg)
+![Koch Snowflake](../Images/Koch-snowflake.jpg)
 
-![Sierpinski-carpet](./Images/Sierpinski-carpet.png)
+![Sierpinski-carpet](../Images/Sierpinski-carpet.png)
 
 Fractals are created using recursions a technique where you create looping through having a function call itself over and over again. I, so far have created a fractal tree and a sierpinski triangle.
+
+I myself created a fractal tree and a sierpinski triangle
+
+![Fractal Tree](https://raw.githubusercontent.com/ItsJustDaniel/Project-Images/master/Screenshots/Fractal%20Tree.png?style=fractalTree)

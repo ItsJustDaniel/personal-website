@@ -10,8 +10,8 @@ const Layout = props => (
       <StarField />
       <Navbar />
       {props.children}
+      <Footer />
     </div>
-    <Footer />
   </div>
 )
 
